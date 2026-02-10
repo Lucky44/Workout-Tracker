@@ -3,8 +3,8 @@
 :root {
   font-family: 'Syne', sans-serif;
   --font-header: 'Lexend', sans-serif;
-  line-height: 1.7;
-  /* Increased from 1.5 to prevent descender clipping */
+  line-height: normal;
+  /* Reset to normal to let font metrics handle spacing */
 
   font-weight: 400;
 

@@ -47,8 +47,9 @@ export const LogTracker: React.FC = () => {
                                     color: isCompleted ? 'rgba(255, 255, 255, 0.4)' : 'var(--primary-color)',
                                     fontSize: '0.95rem',
                                     fontWeight: 500,
-                                    flex: 1,
-                                    paddingRight: '0.5rem'
+                                    paddingRight: '0.5rem',
+                                    paddingBottom: '4px', // Space for descenders
+                                    display: 'inline-block'
                                 }}>
                                     {activity.name} {activity.goal?.reps ? `(${activity.goal.sets ? `${activity.goal.sets}x` : ''}${activity.goal.reps} reps)` : ''}
                                     {activity.goal?.durationSeconds ? `(${activity.goal.durationSeconds}s)` : ''}

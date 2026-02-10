@@ -199,7 +199,7 @@ export const ActivitySetup: React.FC = () => {
                             }}
                             className="activity-item-hover"
                         >
-                            <span style={{ color: 'var(--primary-color)', display: 'inline-block', lineHeight: '1.2' }}>{activity.name}</span>
+                            <span style={{ color: 'var(--primary-color)', display: 'inline-block', lineHeight: 'normal', paddingBottom: '4px' }}>{activity.name}</span>
                         </li>
                     ))}
                     {activities.length === 0 && <p style={{ color: '#888' }}>No activities found.</p>}
