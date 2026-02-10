@@ -1,3 +1,22 @@
+# Workout Tracker - Session Notes (Feb 10, 2026)
+
+## 🏆 Completed in this Session
+
+### 1. Date Logic Refactor (Critical Fix)
+- **Root Cause**: Identified that `toISOString()` was recording dates in UTC, causing an 8-hour offset for PST users.
+- **Solution**: Created `src/utils/dateUtils.ts` to centralize local date formatting using `getFullYear/Month/Date`.
+- **Impact**: Workouts logged in the evening are now correctly associated with the current local day.
+
+### 2. PWA Update Infrastructure
+- **Version Footer**: Added `v0.51` text to the app footer for immediate version verification.
+- **Manual Refresh**: Implemented a "Check for Update" button that triggers `window.location.reload()` to help bypass aggressive iOS/Chrome caching.
+
+### 3. Developer Environment Optimization
+- **Terminal Crash Recovery**: Diagnosed a PowerShell feedback loop hang.
+- **New Deployment Protocol**: Established "Bulletproof Mode" (redirection to files) for more reliable command execution in high-lag environments.
+
+---
+
 # Workout Tracker - Session Notes (Feb 9, 2026)
 
 ## 🏆 Completed in this Session

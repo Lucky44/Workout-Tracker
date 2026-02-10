@@ -11,6 +11,7 @@ Check it out here: **[Workout Tracker Dashboard](https://Lucky44.github.io/Worko
 - **Stats Dashboard**: Visualize your progress over the last day, week, or month with interactive charts.
 - **PWA Support**: Install it on your phone for a native app experience.
 - **Offline Capable**: Works even when you're at the gym with poor reception.
+- **Force Updates**: Integrated "Check for Update" button to ensure you're always running the latest logic.
 
 ## 🛠️ Technology Stack
 - **Frontend**: React 19 + TypeScript

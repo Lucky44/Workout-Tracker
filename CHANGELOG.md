@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.51] - 2026-02-10
+
+### 🚀 Added
+- **"Check for Update" Button**: Added a manual refresh button in the footer to help force-reload cached PWA versions.
+- **Version Tracking**: Visible version number (v0.51) in the footer for easier troubleshooting.
+
+## [0.50] - 2026-02-10
+
+### 🛠️ Fixed
+- **Local Date Offset**: Switched from UTC (`toISOString`) to local system time for all date logging and chart display. This fixes the issue where evening workouts were recorded on the "tomorrow" date.
+
 ## [1.0.0] - 2026-02-09
 
 ### 🚀 Added
