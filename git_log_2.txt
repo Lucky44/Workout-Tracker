@@ -1,0 +1,3 @@
+88f63b7 Force trigger deployment workflow
+98dfee6 Trigger deployment with anchor change
+0a15552 Configure GitHub Pages deployment and cleanup repository

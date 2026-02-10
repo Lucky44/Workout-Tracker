@@ -1,0 +1,10 @@
+src/App.css
+src/App.tsx
+src/components/ActivitySetup.tsx
+src/components/LogTracker.tsx
+src/components/StatsDashboard.tsx
+src/context/ActivityContext.tsx
+src/index.css
+src/main.tsx
+src/types.ts
+src/vite-env.d.ts

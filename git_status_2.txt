@@ -1,0 +1,33 @@
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	deleted:    .eslintrc.cjs
+	modified:   package.json
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	curl_out.txt
+	dist_ls.txt
+	eslint.config.js
+	git_branch.txt
+	git_files.txt
+	git_log.txt
+	git_ls_src.txt
+	git_node_modules.txt
+	git_remote.txt
+	git_rm_out.txt
+	git_src_list.txt
+	git_status_2.txt
+	git_status_verification.txt
+	lint_out.txt
+	push_deploy.txt
+	push_force_debug.txt
+	push_trigger.txt
+	src_dir.txt
+	src_list.txt
+	tsc_out.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
