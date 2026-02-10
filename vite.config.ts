@@ -19,6 +19,7 @@ export default defineConfig({
         display: 'standalone',
         orientation: 'portrait',
         start_url: '/Workout-Tracker/',
+        scope: '/Workout-Tracker/',
         icons: [
           {
             src: 'icon.svg',

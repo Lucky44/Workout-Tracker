@@ -9,12 +9,25 @@ function App() {
 
     useEffect(() => {
         const checkOrientation = () => {
-            setIsLandscape(window.innerWidth > window.innerHeight && window.innerHeight < 600);
+            // Check if viewport is landscape
+            const landscape = window.matchMedia("(orientation: landscape)").matches;
+            // Only block if it's a mobile/tablet sized screen (width < 1024)
+            const isMobileSized = window.innerWidth < 1024;
+            setIsLandscape(landscape && isMobileSized);
         };
 
         checkOrientation();
+
+        const mql = window.matchMedia("(orientation: landscape)");
+        mql.addEventListener('change', checkOrientation);
         window.addEventListener('resize', checkOrientation);
-        return () => window.removeEventListener('resize', checkOrientation);
+        window.addEventListener('orientationchange', checkOrientation);
+
+        return () => {
+            mql.removeEventListener('change', checkOrientation);
+            window.removeEventListener('resize', checkOrientation);
+            window.removeEventListener('orientationchange', checkOrientation);
+        };
     }, []);
 
     if (isLandscape) {
@@ -37,7 +50,7 @@ function App() {
             <LogTracker />
             <StatsDashboard />
             <div style={{ marginTop: '3rem', textAlign: 'center', opacity: 0.8, color: 'var(--primary-color)', fontSize: '0.8rem', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.5rem' }}>
-                <span>v 0.57</span>
+                <span>v 0.58</span>
                 <button
                     onClick={() => window.location.reload()}
                     style={{

@@ -2,11 +2,16 @@
 
 ## 🏆 Completed in this Session (Latest)
 
-### 1. Hardened Portrait Lock (v 0.56)
-- **Objective**: Ensure the app stays in portrait mode even in mobile browsers or when manifest rules are ignored.
-- **PWA Fix**: Added `display: 'standalone'` and `start_url` to `vite.config.ts`. Without "standalone" mode, mobile OSs often ignore the `orientation` manifest property.
-- **Browser Guard**: Implemented a CSS "Orientation Guard" that displays a friendly reminder to rotate the device if landscape mode is detected on small screens.
-- **Versioning**: Incremented to `v 0.56`.
+### 1. Robust Portrait Lock & Media Queries (v 0.58)
+- **Objective**: Fix persistent rotation issues where the guard wasn't triggering.
+- **Refinement**: Switched from basic width/height comparisons to `window.matchMedia("(orientation: landscape)")` which is the browser's native/accurate way of detecting rotation.
+- **Aggression**: Increased the threshold to trigger the guard on all screens smaller than 1024px width in landscape (covering all phones and most tablets).
+- **Update Logic**: Added `orientationchange` and `matchMedia` listeners to catch rotations more reliably on varied mobile engines.
+- **Versioning**: Incremented to `v 0.58`.
+
+### 2. Hard React-based Orientation Shield (v 0.57)
+- **Objective**: Replace the entire UI with a "Rotate Device" screen.
+- **Implementation**: Created a dedicated `OrientationGuard` component in React that triggers based on viewport detection.
 
 ---
 
