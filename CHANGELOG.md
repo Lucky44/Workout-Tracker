@@ -10,6 +10,7 @@ All notable changes to this project will be documented in this file.
 - **Color Palette**: Transitioned to a **Deep Midnight Navy** background (#02040a) with subtle radial glows for high chromatic contrast with the blue accents.
 - **Color Palette**: Synchronized main title to primary blue accent with glow effect.
 - **Button Glow**: Added hover glows and transitions to all buttons.
+- **Mobile Optimization**: Implemented fluid typography (`clamp()`), larger touch targets, and haptic tap feedback (`scale(0.96)`) for a native app feel.
 
 ### 🧪 System Test
 - **Speed Run**: Verified a fix for the terminal stalling issue using the new "Bulletproof Mode" tasking.
