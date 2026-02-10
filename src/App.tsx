@@ -1,10 +1,35 @@
-// Workout Tracker - Updated: 2026-02-09
+import { useState, useEffect } from 'react';
 import { ActivitySetup } from './components/ActivitySetup';
 import { LogTracker } from './components/LogTracker';
 import { StatsDashboard } from './components/StatsDashboard';
-import './App.css'; // We might need to create this or use inline/global
+import './App.css';
 
 function App() {
+    const [isLandscape, setIsLandscape] = useState(false);
+
+    useEffect(() => {
+        const checkOrientation = () => {
+            setIsLandscape(window.innerWidth > window.innerHeight && window.innerHeight < 600);
+        };
+
+        checkOrientation();
+        window.addEventListener('resize', checkOrientation);
+        return () => window.removeEventListener('resize', checkOrientation);
+    }, []);
+
+    if (isLandscape) {
+        return (
+            <div className="orientation-guard">
+                <div className="guard-content">
+                    <div className="guard-icon">🔄</div>
+                    <h2>Portrait Mode Required</h2>
+                    <p>Please rotate your device to continue tracking your workout.</p>
+                    <div className="guard-hint">The app is optimized for vertical use.</div>
+                </div>
+            </div>
+        );
+    }
+
     return (
         <div style={{ maxWidth: '600px', margin: '0 auto', padding: '1rem' }}>
             <h1>Workout Tracker</h1>
@@ -12,7 +37,7 @@ function App() {
             <LogTracker />
             <StatsDashboard />
             <div style={{ marginTop: '3rem', textAlign: 'center', opacity: 0.8, color: 'var(--primary-color)', fontSize: '0.8rem', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.5rem' }}>
-                <span>v 0.56</span>
+                <span>v 0.57</span>
                 <button
                     onClick={() => window.location.reload()}
                     style={{

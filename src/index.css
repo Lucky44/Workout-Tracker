@@ -97,26 +97,76 @@ button:focus-visible {
   }
 }
 
-/* Orientation Lock Guard for Browser Users */
-@media screen and (orientation: landscape) and (max-height: 500px) {
-  body::after {
-    content: "Please rotate your device to Portrait mode for the best experience.";
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background: #02040a;
-    color: var(--primary-color);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 2rem;
-    z-index: 9999;
-    font-family: var(--font-header);
-    font-weight: 700;
-    font-size: 1.2rem;
-    line-height: 1.4;
+/* Orientation Guard Styles */
+.orientation-guard {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #02040a;
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background: radial-gradient(circle at center, #101525 0%, #02040a 100%);
+}
+
+.guard-content {
+  text-align: center;
+  background: rgba(136, 153, 255, 0.05);
+  padding: 3rem 2rem;
+  border-radius: 24px;
+  border: 1px solid var(--border-subtle);
+  backdrop-filter: blur(10px);
+  max-width: 400px;
+}
+
+.guard-icon {
+  font-size: 3.5rem;
+  margin-bottom: 1.5rem;
+  animation: rotateHint 2s infinite ease-in-out;
+  display: inline-block;
+}
+
+.orientation-guard h2 {
+  font-family: var(--font-header);
+  color: var(--primary-color);
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.orientation-guard p {
+  opacity: 0.8;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+}
+
+.guard-hint {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--primary-color);
+  opacity: 0.6;
+}
+
+@keyframes rotateHint {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  25% {
+    transform: rotate(-90deg);
+  }
+
+  75% {
+    transform: rotate(-90deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
   }
 }
