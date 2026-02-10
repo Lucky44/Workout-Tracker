@@ -96,3 +96,27 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+/* Orientation Lock Guard for Browser Users */
+@media screen and (orientation: landscape) and (max-height: 500px) {
+  body::after {
+    content: "Please rotate your device to Portrait mode for the best experience.";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #02040a;
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+    z-index: 9999;
+    font-family: var(--font-header);
+    font-weight: 700;
+    font-size: 1.2rem;
+    line-height: 1.4;
+  }
+}

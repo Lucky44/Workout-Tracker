@@ -16,7 +16,9 @@ export default defineConfig({
         description: 'Track your daily workouts effectively.',
         theme_color: '#8899ff',
         background_color: '#02040a',
+        display: 'standalone',
         orientation: 'portrait',
+        start_url: '/Workout-Tracker/',
         icons: [
           {
             src: 'icon.svg',

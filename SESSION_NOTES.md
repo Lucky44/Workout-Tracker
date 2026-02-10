@@ -2,11 +2,21 @@
 
 ## 🏆 Completed in this Session (Latest)
 
-### 1. Orientation Lock & Version Update (v0.55)
+### 1. Hardened Portrait Lock (v 0.56)
+- **Objective**: Ensure the app stays in portrait mode even in mobile browsers or when manifest rules are ignored.
+- **PWA Fix**: Added `display: 'standalone'` and `start_url` to `vite.config.ts`. Without "standalone" mode, mobile OSs often ignore the `orientation` manifest property.
+- **Browser Guard**: Implemented a CSS "Orientation Guard" that displays a friendly reminder to rotate the device if landscape mode is detected on small screens.
+- **Versioning**: Incremented to `v 0.56`.
+
+---
+
+## 🏆 Completed in this Session (Earlier)
+
+### 1. Orientation Lock & Version Update (v 0.55)
 - **Objective**: Prevent the UI from breaking when the phone is rotated.
 - **Outcome**: Locked the PWA manifest to `portrait` orientation.
 - **Details**: Added `"orientation": "portrait"` to the PWA manifest in `vite.config.ts`.
-- **UI Patch**: Updated version to `v0.55` and brightened the footer text.
+- **UI Patch**: Updated version to `v 0.55` and brightened the footer text.
 - **Compaction**: Reduced vertical padding and margins for activity items and headers to allow more content to fit on screen. Reset `line-height` and removed previous experimental descender fixes in favor of a tighter, more efficient vertical layout.
 
 ---
