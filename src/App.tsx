@@ -1,3 +1,4 @@
+// Workout Tracker - Personal Dashboard
 import { ActivitySetup } from './components/ActivitySetup';
 import { LogTracker } from './components/LogTracker';
 import { StatsDashboard } from './components/StatsDashboard';
