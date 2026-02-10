@@ -11,6 +11,9 @@ function App() {
             <ActivitySetup />
             <LogTracker />
             <StatsDashboard />
+            <div style={{ marginTop: '3rem', textAlign: 'center', opacity: 0.5, fontSize: '0.8rem' }}>
+                v0.50
+            </div>
         </div>
     )
 }
