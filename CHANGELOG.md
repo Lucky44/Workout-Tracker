@@ -2,10 +2,18 @@
 
 All notable changes to this project will be documented in this file.
 
-## [0.53] - 2026-02-10
+## [0.54] - 2026-02-10
+
+### 🎨 Aesthetic Overhaul
+- **Syne & Lexend Fonts**: Syne for body copy and Lexend for headers/buttons.
+- **Glassmorphism**: Added backdrop-blur, semi-transparent backgrounds, and subtle borders to all cards.
+- **Color Palette**: Transitioned to a **Deep Midnight Navy** background (#02040a) with subtle radial glows for high chromatic contrast with the blue accents.
+- **Color Palette**: Synchronized main title to primary blue accent with glow effect.
+- **Button Glow**: Added hover glows and transitions to all buttons.
 
 ### 🧪 System Test
 - **Speed Run**: Verified a fix for the terminal stalling issue using the new "Bulletproof Mode" tasking.
+
 
 ## [0.52] - 2026-02-10
 

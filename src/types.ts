@@ -13,6 +13,8 @@ export interface Activity {
     color: string;
 }
 
+
+
 export interface LogEntry {
     id: string;
     activityId: string;

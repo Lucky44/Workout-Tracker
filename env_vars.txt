@@ -1,0 +1,64 @@
+
+Name                           Value
+----                           -----
+ALLUSERSPROFILE                C:\ProgramData
+ANTIGRAVITY_AGENT              1
+ANTIGRAVITY_CLI_ALIAS          agy
+APPDATA                        C:\Users\tripp\AppData\Roaming
+ChocolateyInstall              C:\ProgramData\chocolatey
+ChocolateyLastPathUpdate       134126609676192219
+CHROME_CRASHPAD_PIPE_NAME      \\.\pipe\crashpad_79092_SBCZIQUTHSMOYJBB
+Claude Code v2                 C:\Users\tripp\.local\bin\claude.exe
+COLORTERM                      truecolor
+CommonProgramFiles             C:\Program Files\Common Files
+CommonProgramFiles(x86)        C:\Program Files (x86)\Common Files
+CommonProgramW6432             C:\Program Files\Common Files
+COMPUTERNAME                   FRANKENPUTER
+ComSpec                        C:\WINDOWS\system32\cmd.exe
+DriverData                     C:\Windows\System32\Drivers\DriverData
+EFC_2136_1592913036            1
+EFC_2136_344590478             1
+GIT_ASKPASS                    c:\Users\tripp\AppData\Local\Programs\Antigravity\resources\app\extensions\git\dist\askpass.sh
+HOMEDRIVE                      C:
+HOMEPATH                       \Users\tripp
+LANG                           en_US.UTF-8
+LOCALAPPDATA                   C:\Users\tripp\AppData\Local
+LOGONSERVER                    \\FRANKENPUTER
+NUMBER_OF_PROCESSORS           16
+OneDrive                       C:\Users\tripp\OneDrive
+OneDriveConsumer               C:\Users\tripp\OneDrive
+OS                             Windows_NT
+PAGER                          cat
+Path                           C:\Program Files\PowerShell\7;C:\Python314\Scripts\;C:\Python314\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShel…
+PATHEXT                        .COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW;.CPL
+POWERSHELL_DISTRIBUTION_CHANN… MSI:Windows 10 Home
+PROCESSOR_ARCHITECTURE         AMD64
+PROCESSOR_IDENTIFIER           AMD64 Family 25 Model 97 Stepping 2, AuthenticAMD
+PROCESSOR_LEVEL                25
+PROCESSOR_REVISION             6102
+ProgramData                    C:\ProgramData
+ProgramFiles                   C:\Program Files
+ProgramFiles(x86)              C:\Program Files (x86)
+ProgramW6432                   C:\Program Files
+PSModulePath                   C:\Users\tripp\OneDrive\Documents\PowerShell\Modules;C:\Program Files\PowerShell\Modules;c:\program files\powershell\7\Modules;C:\Program Files\WindowsPowerSh…
+PUBLIC                         C:\Users\Public
+PYTHONSTARTUP                  c:\Users\tripp\AppData\Roaming\Antigravity\User\workspaceStorage\fd48947e6455d836779d75e13dcc4c1c\ms-python.python\pythonrc.py
+SESSIONNAME                    Console
+SystemDrive                    C:
+SystemRoot                     C:\WINDOWS
+TEMP                           C:\Users\tripp\AppData\Local\Temp
+TERM_PROGRAM                   vscode
+TERM_PROGRAM_VERSION           1.107.0
+TMP                            C:\Users\tripp\AppData\Local\Temp
+USERDOMAIN                     FRANKENPUTER
+USERDOMAIN_ROAMINGPROFILE      FRANKENPUTER
+USERNAME                       tripp
+USERPROFILE                    C:\Users\tripp
+VSCODE_GIT_ASKPASS_EXTRA_ARGS  
+VSCODE_GIT_ASKPASS_MAIN        c:\Users\tripp\AppData\Local\Programs\Antigravity\resources\app\extensions\git\dist\askpass-main.js
+VSCODE_GIT_ASKPASS_NODE        C:\Users\tripp\AppData\Local\Programs\Antigravity\Antigravity.exe
+VSCODE_GIT_IPC_HANDLE          \\.\pipe\vscode-git-02d85c9b84-sock
+VSCODE_INJECTION               1
+VSCODE_PYTHON_AUTOACTIVATE_GU… 1
+windir                         C:\WINDOWS
+

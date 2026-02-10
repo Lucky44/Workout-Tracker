@@ -32,16 +32,24 @@ export const LogTracker: React.FC = () => {
 
                         return (
                             <li key={activity.id} style={{
-                                margin: '0.5rem 0',
-                                padding: '0.5rem',
-                                border: '1px solid #444',
-                                borderRadius: '8px',
+                                margin: '0.8rem 0',
+                                padding: '1rem',
+                                border: '1px solid var(--border-subtle)',
+                                borderRadius: '16px',
                                 display: 'flex',
                                 justifyContent: 'space-between',
                                 alignItems: 'center',
-                                backgroundColor: isCompleted ? 'rgba(100, 108, 255, 0.1)' : 'transparent'
+                                backgroundColor: isCompleted ? 'rgba(136, 153, 255, 0.08)' : 'rgba(255, 255, 255, 0.02)',
+                                transition: 'all 0.2s ease'
                             }}>
-                                <span style={{ textDecoration: isCompleted ? 'line-through' : 'none', color: 'var(--primary-color)' }}>
+                                <span style={{
+                                    textDecoration: isCompleted ? 'line-through' : 'none',
+                                    color: isCompleted ? 'rgba(255, 255, 255, 0.4)' : 'var(--primary-color)',
+                                    fontSize: '0.95rem',
+                                    fontWeight: 500,
+                                    flex: 1,
+                                    paddingRight: '0.5rem'
+                                }}>
                                     {activity.name} {activity.goal?.reps ? `(${activity.goal.sets ? `${activity.goal.sets}x` : ''}${activity.goal.reps} reps)` : ''}
                                     {activity.goal?.durationSeconds ? `(${activity.goal.durationSeconds}s)` : ''}
                                 </span>
@@ -49,17 +57,20 @@ export const LogTracker: React.FC = () => {
                                     <button
                                         onClick={() => handleToggle(activity.id)}
                                         style={{
-                                            padding: '0.3em 0.6em',
-                                            minWidth: '80px',
-                                            backgroundColor: isCompleted ? 'var(--primary-color)' : undefined,
-                                            color: isCompleted ? 'white' : undefined,
-                                            borderColor: isCompleted ? 'var(--primary-color)' : undefined
+                                            padding: '0.6em 1.2em',
+                                            minWidth: '94px',
+                                            backgroundColor: isCompleted ? 'var(--primary-color)' : 'transparent',
+                                            color: isCompleted ? 'white' : 'var(--primary-color)',
+                                            borderColor: 'var(--primary-color)',
+                                            fontSize: '0.75rem',
+                                            borderRadius: '10px'
                                         }}
                                     >
                                         {isCompleted ? 'Undo' : 'Done?'}
                                     </button>
                                 </div>
                             </li>
+
                         );
                     })}
                 </ul>

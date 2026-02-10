@@ -1,0 +1,2 @@
+C:\Users\tripp\OneDrive\Documents\PowerShell\Microsoft.PowerShell_profile.ps1
+Get-ChildItem: Cannot find path 'C:\Users\tripp\OneDrive\Documents\PowerShell\Microsoft.PowerShell_profile.ps1' because it does not exist.

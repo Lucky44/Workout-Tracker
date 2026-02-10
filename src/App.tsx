@@ -12,7 +12,7 @@ function App() {
             <LogTracker />
             <StatsDashboard />
             <div style={{ marginTop: '3rem', textAlign: 'center', opacity: 0.5, fontSize: '0.8rem', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.5rem' }}>
-                <span>v0.53</span>
+                <span>v0.54</span>
                 <button
                     onClick={() => window.location.reload()}
                     style={{

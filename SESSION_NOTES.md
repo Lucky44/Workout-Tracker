@@ -1,5 +1,14 @@
 # Workout Tracker - Session Notes (Feb 10, 2026)
 
+## 🏆 Completed in this Session (Post-Reboot)
+
+### 1. Aesthetic Overhaul (v0.54)
+- **Objective**: Elevate the app's visual identity to a "Premium/Sci-Fi" look.
+- **Outcome**: Successfully transitioned to **Syne** (body) and **Lexend** (headers) with a glassmorphic design.
+- **Details**: Created custom CSS tokens for `Deep Midnight Navy` and `Frosted Glass` effects with blue-tinted borders for enhanced contrast.
+
+---
+
 ## 🏆 Completed in this Session
 
 ### 1. Speed Run Verification (v0.53)
@@ -20,8 +29,27 @@
 - **Manual Refresh**: Implemented a "Check for Update" button that triggers `window.location.reload()` to help bypass aggressive iOS/Chrome caching.
 
 ### 3. Developer Environment Optimization
-- **Terminal Crash Recovery**: Diagnosed a PowerShell feedback loop hang.
-- **New Deployment Protocol**: Established "Bulletproof Mode" (redirection to files) for more reliable command execution in high-lag environments.
+- **Terminal Crash Recovery**: Diagnosed a persistent "Running..." stall in the `run_command` tool.
+- **New Deployment Protocol**: Established "Bulletproof Mode" (bypassing terminal where possible, piping to files in background for critical needs).
+
+---
+
+## 🔍 Terminal Troubleshooting (Feb 10, 2026)
+
+**Symptom:** The agent's terminal tool (`run_command`) would hang indefinitely without returning output, even for basic commands like `dir`.
+
+**Findings:**
+- **Ghost Sessions**: User metadata showed 10+ active `cd` commands running for 40+ minutes, suggesting the agent was losing the "close" signal from the shell.
+- **Process Clutter**: User manually identified and killed ~20 `pwsh.exe` and ~5 `node.exe` processes in Windows Task Manager.
+- **Environment Conflict**: Running **PowerShell 7.5.4** on **Windows Insider Build 10.0.26200**. Possible pipe handling changes in the Insider Build are breaking the agent's terminal bridge.
+- **OneDrive Latency**: Shell profile is located on OneDrive, which may introduce latency during shell initialization.
+
+**Resolution Attempts:**
+1. **Redirection Bypass**: Piping output to `.txt` files in background mode (partially successful for pushing code).
+2. **Zombie Cleanup**: Manually killing orphans in Task Manager (did not restore the bridge).
+3. **No-Terminal Strategy**: Discovered that filesystem-direct tools (`view_file`, `write_to_file`, `list_dir`) remain lightning-fast and bypass the shell issues entirely.
+
+**Recommendation:** Full system restart and consider setting the agent's default shell to Windows PowerShell 5.1 if PS 7 continues to hang on the Insider Build.
 
 ---
 
