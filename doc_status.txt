@@ -1,0 +1,8 @@
+Auto packing the repository for optimum performance.
+See "git help gc" for manual housekeeping.
+warning: There are too many unreachable loose objects; run 'git prune' to remove them.
+[main cceaed9] Update docs and session notes
+ 3 files changed, 31 insertions(+)
+To https://github.com/Lucky44/Workout-Tracker.git
+   eef9b7a..cceaed9  main -> main
+cceaed9 Update docs and session notes

@@ -2,7 +2,11 @@
 
 ## 🏆 Completed in this Session
 
-### 1. Date Logic Refactor (Critical Fix)
+### 1. UI Refinement (v0.52)
+- **Contrast Fix**: Updated empty-state text color in `LogTracker` to match the brand identity (#8899ff).
+- **Versioning**: Incremented version to `v0.52`.
+
+### 2. Date Logic Refactor (v0.51)
 - **Root Cause**: Identified that `toISOString()` was recording dates in UTC, causing an 8-hour offset for PST users.
 - **Solution**: Created `src/utils/dateUtils.ts` to centralize local date formatting using `getFullYear/Month/Date`.
 - **Impact**: Workouts logged in the evening are now correctly associated with the current local day.

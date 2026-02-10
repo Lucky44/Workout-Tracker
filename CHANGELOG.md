@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.52] - 2026-02-10
+
+### 🎨 UI Polish
+- **LogTracker Styling**: Fixed the color of "No activities added yet" to use the `#8899ff` primary color for better theme consistency.
+
 ## [0.51] - 2026-02-10
 
 ### 🚀 Added
