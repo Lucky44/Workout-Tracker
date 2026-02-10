@@ -3,7 +3,8 @@
 :root {
   font-family: 'Syne', sans-serif;
   --font-header: 'Lexend', sans-serif;
-  line-height: 1.5;
+  line-height: 1.7;
+  /* Increased from 1.5 to prevent descender clipping */
 
   font-weight: 400;
 
@@ -13,7 +14,8 @@
   /* Deep Midnight Navy */
 
   font-synthesis: none;
-  text-rendering: optimizeLegibility;
+  text-rendering: geometricPrecision;
+  /* Better for custom fonts */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 

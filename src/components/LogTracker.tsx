@@ -33,7 +33,7 @@ export const LogTracker: React.FC = () => {
                         return (
                             <li key={activity.id} style={{
                                 margin: '0.8rem 0',
-                                padding: '1rem',
+                                padding: '0.75rem 1rem 0.95rem 1rem', // Asymmetric padding to favor descenders
                                 border: '1px solid var(--border-subtle)',
                                 borderRadius: '16px',
                                 display: 'flex',

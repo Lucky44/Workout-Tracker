@@ -11,7 +11,7 @@ function App() {
             <ActivitySetup />
             <LogTracker />
             <StatsDashboard />
-            <div style={{ marginTop: '3rem', textAlign: 'center', opacity: 0.5, fontSize: '0.8rem', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.5rem' }}>
+            <div style={{ marginTop: '3rem', textAlign: 'center', opacity: 0.8, color: 'var(--primary-color)', fontSize: '0.8rem', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.5rem' }}>
                 <span>v0.55</span>
                 <button
                     onClick={() => window.location.reload()}

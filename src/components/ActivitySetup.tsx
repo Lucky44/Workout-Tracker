@@ -110,7 +110,7 @@ export const ActivitySetup: React.FC = () => {
                         placeholder="Activity Name"
                         value={name}
                         onChange={e => setName(e.target.value)}
-                        style={{ padding: '0.5rem' }}
+                        style={{ padding: '0.8rem' }}
                     />
 
                     <select value={type} onChange={e => setType(e.target.value as ActivityType)} style={{ padding: '0.5rem' }}>
@@ -188,16 +188,18 @@ export const ActivitySetup: React.FC = () => {
                             key={activity.id}
                             onClick={() => setEditingId(activity.id)}
                             style={{
-                                padding: '0.8rem',
+                                padding: '0.6rem 0.8rem 0.85rem 0.8rem',
                                 borderBottom: '1px solid #333',
                                 cursor: 'pointer',
                                 backgroundColor: '#2a2a2a',
-                                borderRadius: '4px',
-                                marginBottom: '0.5rem'
+                                borderRadius: '12px',
+                                marginBottom: '0.5rem',
+                                display: 'flex',
+                                alignItems: 'center'
                             }}
                             className="activity-item-hover"
                         >
-                            <span style={{ color: 'var(--primary-color)' }}>{activity.name}</span>
+                            <span style={{ color: 'var(--primary-color)', display: 'inline-block', lineHeight: '1.2' }}>{activity.name}</span>
                         </li>
                     ))}
                     {activities.length === 0 && <p style={{ color: '#888' }}>No activities found.</p>}
