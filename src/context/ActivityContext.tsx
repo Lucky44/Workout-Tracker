@@ -15,6 +15,12 @@ interface ActivityProviderProps {
     children: ReactNode;
 }
 
+const generateId = () => {
+    return (typeof crypto !== 'undefined' && crypto.randomUUID)
+        ? crypto.randomUUID()
+        : Math.random().toString(36).substring(2, 11);
+};
+
 export const ActivityProvider: React.FC<ActivityProviderProps> = ({ children }) => {
     const [activities, setActivities] = useState<Activity[]>(() => {
         const saved = localStorage.getItem('activities');
@@ -35,7 +41,7 @@ export const ActivityProvider: React.FC<ActivityProviderProps> = ({ children }) 
     }, [logs]);
 
     const addActivity = (activity: Omit<Activity, 'id'>) => {
-        const newActivity = { ...activity, id: crypto.randomUUID() };
+        const newActivity = { ...activity, id: generateId() };
         setActivities(prev => [...prev, newActivity]);
     };
 
@@ -57,7 +63,7 @@ export const ActivityProvider: React.FC<ActivityProviderProps> = ({ children }) 
         // If we are just toggling completion for "today", we might want to update existing entry.
         // But let's just append for now and handle "find existing" in UI or helper.
 
-        const newEntry = { ...entry, id: crypto.randomUUID() };
+        const newEntry = { ...entry, id: generateId() };
         setLogs(prev => {
             // Simple dedupe for same day/activity if needed, but let's just add.
             // Actually, if we want to toggle, we should check if one exists.
