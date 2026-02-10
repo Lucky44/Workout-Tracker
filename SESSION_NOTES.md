@@ -5,8 +5,9 @@
 ### 1. Orientation Lock & Version Update (v0.55)
 - **Objective**: Prevent the UI from breaking when the phone is rotated.
 - **Outcome**: Locked the PWA manifest to `portrait` orientation.
-- **Details**: Added `"orientation": "portrait"` to the PWA manifest in `vite.config.ts`. This ensures the app stays in portrait mode when launched from the home screen on iOS and Android. Updated the app version to `v0.55`.
-- **UI Patch**: Fixed descender clipping (e.g., the bottom of 'g') by increasing global `line-height` to `1.7` and implementing asymmetric padding (`padding-bottom` slightly larger than `padding-top`) for activity items. This provides breathing room for sublinears without significantly increasing section height.
+- **Details**: Added `"orientation": "portrait"` to the PWA manifest in `vite.config.ts`.
+- **UI Patch**: Updated version to `v0.55` and brightened the footer text.
+- **Compaction**: Reduced vertical padding and margins for activity items and headers to allow more content to fit on screen. Reset `line-height` and removed previous experimental descender fixes in favor of a tighter, more efficient vertical layout.
 
 ---
 

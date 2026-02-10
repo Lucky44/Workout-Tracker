@@ -32,8 +32,8 @@ export const LogTracker: React.FC = () => {
 
                         return (
                             <li key={activity.id} style={{
-                                margin: '0.8rem 0',
-                                padding: '0.75rem 1rem 0.95rem 1rem', // Asymmetric padding to favor descenders
+                                margin: '0.5rem 0',
+                                padding: '0.5rem 1rem',
                                 border: '1px solid var(--border-subtle)',
                                 borderRadius: '16px',
                                 display: 'flex',
@@ -47,9 +47,8 @@ export const LogTracker: React.FC = () => {
                                     color: isCompleted ? 'rgba(255, 255, 255, 0.4)' : 'var(--primary-color)',
                                     fontSize: '0.95rem',
                                     fontWeight: 500,
-                                    paddingRight: '0.5rem',
-                                    paddingBottom: '4px', // Space for descenders
-                                    display: 'inline-block'
+                                    flex: 1,
+                                    paddingRight: '0.5rem'
                                 }}>
                                     {activity.name} {activity.goal?.reps ? `(${activity.goal.sets ? `${activity.goal.sets}x` : ''}${activity.goal.reps} reps)` : ''}
                                     {activity.goal?.durationSeconds ? `(${activity.goal.durationSeconds}s)` : ''}

@@ -188,18 +188,18 @@ export const ActivitySetup: React.FC = () => {
                             key={activity.id}
                             onClick={() => setEditingId(activity.id)}
                             style={{
-                                padding: '0.6rem 0.8rem 0.85rem 0.8rem',
+                                padding: '0.35rem 0.8rem',
                                 borderBottom: '1px solid #333',
                                 cursor: 'pointer',
                                 backgroundColor: '#2a2a2a',
                                 borderRadius: '12px',
-                                marginBottom: '0.5rem',
+                                marginBottom: '0.3rem',
                                 display: 'flex',
                                 alignItems: 'center'
                             }}
                             className="activity-item-hover"
                         >
-                            <span style={{ color: 'var(--primary-color)', display: 'inline-block', lineHeight: 'normal', paddingBottom: '4px' }}>{activity.name}</span>
+                            <span style={{ color: 'var(--primary-color)', display: 'inline-block', lineHeight: '1.2' }}>{activity.name}</span>
                         </li>
                     ))}
                     {activities.length === 0 && <p style={{ color: '#888' }}>No activities found.</p>}
