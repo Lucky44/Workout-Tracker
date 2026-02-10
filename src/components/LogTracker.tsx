@@ -1,9 +1,10 @@
 import React from 'react';
 import { useActivities } from '../context/ActivityContext';
+import { getLocalDateString } from '../utils/dateUtils';
 
 export const LogTracker: React.FC = () => {
     const { activities, logs, logActivity } = useActivities();
-    const today = new Date().toISOString().split('T')[0];
+    const today = getLocalDateString();
 
     const handleToggle = (activityId: string) => {
         const existingLog = logs.find(l => l.activityId === activityId && l.date === today);

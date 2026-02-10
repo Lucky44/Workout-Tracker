@@ -1,0 +1,2 @@
+origin	https://Lucky44@github.com/Lucky44/Workout-Tracker.git (fetch)
+origin	https://Lucky44@github.com/Lucky44/Workout-Tracker.git (push)

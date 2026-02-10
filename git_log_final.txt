@@ -1,0 +1,5 @@
+6786cfc Add project documentation (README and CHANGELOG)
+c2b2f87 Force-apply mobile stability patch
+94fde80 Fix asset paths for mobile Chrome/Safari
+402dd1b Force fresh build after fix
+9c3ed6a Add missing ESLint dependencies for CI

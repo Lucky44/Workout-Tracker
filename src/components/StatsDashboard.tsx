@@ -10,6 +10,7 @@ import {
 } from 'chart.js';
 import { Bar } from 'react-chartjs-2';
 import { useActivities } from '../context/ActivityContext';
+import { getLocalDateString } from '../utils/dateUtils';
 
 ChartJS.register(
     CategoryScale,
@@ -32,7 +33,7 @@ export const StatsDashboard: React.FC = () => {
         for (let i = daysToSubtract - 1; i >= 0; i--) {
             const d = new Date(today);
             d.setDate(d.getDate() - i);
-            dates.push(d.toISOString().split('T')[0]);
+            dates.push(getLocalDateString(d));
         }
         return dates;
     };
