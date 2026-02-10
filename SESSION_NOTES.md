@@ -1,11 +1,20 @@
 # Workout Tracker - Session Notes (Feb 10, 2026)
 
+## 🏆 Completed in this Session (Latest)
+
+### 1. Orientation Lock & Version Update (v0.55)
+- **Objective**: Prevent the UI from breaking when the phone is rotated.
+- **Outcome**: Locked the PWA manifest to `portrait` orientation.
+- **Details**: Added `"orientation": "portrait"` to the PWA manifest in `vite.config.ts`. This ensures the app stays in portrait mode when launched from the home screen on iOS and Android. Updated the app version to `v0.55`.
+
+---
+
 ## 🏆 Completed in this Session (Post-Reboot)
 
 ### 1. Aesthetic Overhaul (v0.54)
 - **Objective**: Elevate the app's visual identity to a "Premium/Sci-Fi" look.
 - **Outcome**: Successfully transitioned to **Syne** (body) and **Lexend** (headers) with a glassmorphic design.
-- **Details**: Created custom CSS tokens for `Deep Midnight Navy` and `Frosted Glass` effects with blue-tinted borders for enhanced contrast.
+- **Details**: Created custom CSS tokens for `Deep Midnight Navy` and `Frosted Glass` effects. Implemented fluid typography and haptic tap feedback for a native mobile feel.
 
 ---
 

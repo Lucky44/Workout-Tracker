@@ -15,7 +15,8 @@ export default defineConfig({
         short_name: 'Workout',
         description: 'Track your daily workouts effectively.',
         theme_color: '#8899ff',
-        background_color: '#242424',
+        background_color: '#02040a',
+        orientation: 'portrait',
         icons: [
           {
             src: 'icon.svg',
