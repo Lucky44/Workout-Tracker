@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.58] - 2026-02-10
+
+### 🛡️ Hardened Orientation Guard
+- **Native Detection**: Replaced manual dimension checks with `window.matchMedia("(orientation: landscape)")` for 100% accuracy across mobile engines.
+- **Aggressive Shielding**: Increased sensitivity to cover all devices under 1024px width in landscape mode.
+- **Improved Responsiveness**: Added `orientationchange` listeners to trigger the guard instantly.
+- **PWA Hardening**: Added `scope` and consistent `start_url` to manifest for better OS recognition of standalone preferences.
+
+## [0.55 - 0.57] - 2026-02-10
+
+### 🛠️ Orientation Lock Infrastructure
+- **React-based Shield**: Implemented a "Soft Lock" system that replaces the entire UI with a "Rotate Device" warning in landscape mode.
+- **Portrait Lock**: Configured PWA manifest for `portrait` and `standalone` display modes.
+- **UI Compaction**: Reduced vertical padding and margins across all components to improve "scannability" and fit more content on mobile screens.
+
 ## [0.54] - 2026-02-10
 
 ### 🎨 Aesthetic Overhaul
