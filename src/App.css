@@ -1,0 +1,54 @@
+.card {
+    padding: 2em;
+    border-radius: 12px;
+    background-color: #1a1a1a;
+    /* Dark card background */
+    border: 1px solid #333;
+    margin-bottom: 1rem;
+}
+
+input,
+select {
+    border-radius: 6px;
+    border: 1px solid #444;
+    background-color: #2a2a2a;
+    color: white;
+    padding: 0.6em;
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+input:focus,
+select:focus {
+    outline: 2px solid var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+label {
+    display: flex;
+    align-items: center;
+    font-size: 0.9em;
+    color: var(--primary-color);
+    /* V Vite/React blue for consistency */
+}
+
+h2 {
+    margin-top: 0;
+    font-size: 1.5rem;
+    color: #fff;
+    border-bottom: 1px solid #333;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Remove spin buttons */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+    appearance: textfield;
+}

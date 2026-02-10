@@ -1,20 +1,16 @@
-import { useState } from 'react'
+import { ActivitySetup } from './components/ActivitySetup';
+import { LogTracker } from './components/LogTracker';
+import { StatsDashboard } from './components/StatsDashboard';
+import './App.css'; // We might need to create this or use inline/global
 
 function App() {
-    const [count, setCount] = useState(0)
-
     return (
-        <>
+        <div style={{ maxWidth: '600px', margin: '0 auto', padding: '1rem' }}>
             <h1>Workout Tracker</h1>
-            <div className="card">
-                <button onClick={() => setCount((count) => count + 1)}>
-                    count is {count}
-                </button>
-                <p>
-                    Edit <code>src/App.tsx</code> and save to test HMR
-                </p>
-            </div>
-        </>
+            <ActivitySetup />
+            <LogTracker />
+            <StatsDashboard />
+        </div>
     )
 }
 

@@ -11,6 +11,9 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  --primary-color: #8899ff;
+  /* Even lighter blue */
 }
 
 body {
@@ -37,9 +40,11 @@ button {
   cursor: pointer;
   transition: border-color 0.25s;
 }
+
 button:hover {
-  border-color: #646cff;
+  border-color: var(--primary-color);
 }
+
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
@@ -50,6 +55,7 @@ button:focus-visible {
     color: #213547;
     background-color: #ffffff;
   }
+
   button {
     background-color: #f9f9f9;
   }
