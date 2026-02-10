@@ -1,4 +1,4 @@
-// Workout Tracker - Personal Dashboard
+// Workout Tracker - Updated: 2026-02-09
 import { ActivitySetup } from './components/ActivitySetup';
 import { LogTracker } from './components/LogTracker';
 import { StatsDashboard } from './components/StatsDashboard';
