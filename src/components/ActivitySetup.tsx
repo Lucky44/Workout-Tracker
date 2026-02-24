@@ -13,7 +13,7 @@ export const ActivitySetup: React.FC = () => {
     const [goalReps, setGoalReps] = useState('');
     const [goalSets, setGoalSets] = useState('');
     const [goalDuration, setGoalDuration] = useState('');
-    const [frequency, setFrequency] = useState('1');
+
 
     useEffect(() => {
         if (editingId) {
@@ -24,7 +24,7 @@ export const ActivitySetup: React.FC = () => {
                 setGoalReps(activity.goal?.reps?.toString() || '');
                 setGoalSets(activity.goal?.sets?.toString() || '');
                 setGoalDuration(activity.goal?.durationSeconds?.toString() || '');
-                setFrequency(activity.frequency.toString());
+
             }
         } else {
             // Reset form when not editing
@@ -33,7 +33,7 @@ export const ActivitySetup: React.FC = () => {
             setGoalReps('');
             setGoalSets('');
             setGoalDuration('');
-            setFrequency('1');
+
         }
     }, [editingId, activities]);
 
@@ -49,7 +49,6 @@ export const ActivitySetup: React.FC = () => {
                 : type === 'duration'
                     ? { durationSeconds: Number(goalDuration) }
                     : undefined,
-            frequency: Number(frequency),
             color: '#' + Math.floor(Math.random() * 16777215).toString(16)
         };
 
@@ -64,7 +63,7 @@ export const ActivitySetup: React.FC = () => {
             setGoalReps('');
             setGoalSets('');
             setGoalDuration('');
-            setFrequency('1');
+
         }
     };
 
@@ -148,17 +147,7 @@ export const ActivitySetup: React.FC = () => {
                         />
                     )}
 
-                    <label>
-                        Times per week:
-                        <input
-                            type="number"
-                            min="1"
-                            max="7"
-                            value={frequency}
-                            onChange={e => setFrequency(e.target.value)}
-                            style={{ width: '3rem', marginLeft: '0.5rem' }}
-                        />
-                    </label>
+
 
                     <div style={{ display: 'flex', gap: '0.5rem' }}>
                         <button type="submit" style={{ flex: 1 }}>{editingId ? 'Save Changes' : 'Save'}</button>
@@ -183,7 +172,7 @@ export const ActivitySetup: React.FC = () => {
 
             {mode === 'edit' && !editingId && (
                 <ul style={{ listStyle: 'none', padding: 0 }}>
-                    {activities.map(activity => (
+                    {[...activities].sort((a, b) => a.name.localeCompare(b.name)).map(activity => (
                         <li
                             key={activity.id}
                             onClick={() => setEditingId(activity.id)}

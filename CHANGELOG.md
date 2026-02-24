@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.61] - 2026-02-24
+
+### 🧹 Cleanup
+- **Removed Frequency Tracking**: Eliminated the unused "times per week" field from activity setup, data models, and context logic to simplify the user experience.
+
+## [0.60] - 2026-02-24
+
+### ✨ Features
+- **Alphabetical Sorting**: Activities are now automatically sorted alphabetically by name in both the daily log and the edit list.
+
+## [0.59] - 2026-02-24
+
+### 🎨 UI Refinement
+- **Header Update**: Simplified "Today's Activities" to just "Activities" in the LogTracker component for a cleaner look.
+
 ## [0.58] - 2026-02-10
 
 ### 🛡️ Hardened Orientation Guard

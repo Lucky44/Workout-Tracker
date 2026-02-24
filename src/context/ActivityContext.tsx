@@ -82,7 +82,6 @@ export const ActivityProvider: React.FC<ActivityProviderProps> = ({ children }) 
     const getActivityStats = (activityId: string) => {
         const activityLogs = logs.filter(l => l.activityId === activityId && l.completed);
         return {
-            completionRate: 0, // TODO: Calculate based on frequency
             totalSessions: activityLogs.length
         };
     };

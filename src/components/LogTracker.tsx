@@ -24,10 +24,10 @@ export const LogTracker: React.FC = () => {
 
     return (
         <div className="card" style={{ marginTop: '2rem', textAlign: 'left' }}>
-            <h2>Today's Activities ({today})</h2>
+            <h2>Activities {today}</h2>
             {activities.length === 0 ? <p style={{ color: 'var(--primary-color)', opacity: 0.8 }}>No activities added yet.</p> : (
                 <ul style={{ listStyle: 'none', padding: 0 }}>
-                    {activities.map(activity => {
+                    {[...activities].sort((a, b) => a.name.localeCompare(b.name)).map(activity => {
                         const isCompleted = logs.some(l => l.activityId === activity.id && l.date === today && l.completed);
 
                         return (

@@ -50,7 +50,7 @@ function App() {
             <LogTracker />
             <StatsDashboard />
             <div style={{ marginTop: '3rem', textAlign: 'center', opacity: 0.8, color: 'var(--primary-color)', fontSize: '0.8rem', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.5rem' }}>
-                <span>v 0.58</span>
+                <span>v 0.61</span>
                 <button
                     onClick={() => window.location.reload()}
                     style={{

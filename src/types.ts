@@ -9,7 +9,6 @@ export interface Activity {
         sets?: number;
         durationSeconds?: number;
     };
-    frequency: number; // times per week
     color: string;
 }
 
@@ -32,5 +31,5 @@ export interface ActivityContextType {
     updateActivity: (activity: Activity) => void;
     logActivity: (entry: Omit<LogEntry, 'id'>) => void;
     getLogsForDate: (date: string) => LogEntry[];
-    getActivityStats: (activityId: string) => { completionRate: number, totalSessions: number };
+    getActivityStats: (activityId: string) => { totalSessions: number };
 }

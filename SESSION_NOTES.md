@@ -1,3 +1,24 @@
+# Workout Tracker - Session Notes (Feb 24, 2026)
+
+## 🏆 Completed in this Session (Latest)
+
+### 1. Data Model Cleanup (v0.61)
+- **Objective**: Remove unused "times per week" (frequency) parameter.
+- **Outcome**: Simplified `Activity` model, cleaned up `ActivitySetup` UI, and removed logic placeholders in `ActivityContext`.
+- **Details**: Redundant state and input fields removed. Incremented version to `v 0.61`.
+
+### 2. Alphabetical Sorting (v0.60)
+- **Objective**: Improve scannability of the activities list.
+- **Outcome**: Implemented `localeCompare` sorting in both `LogTracker` and `ActivitySetup`.
+- **Details**: Activities now appear alphabetically by name. Incremented version to `v 0.60`.
+
+### 2. Header Simplification (v0.59)
+- **Objective**: Simplify the daily activities header.
+- **Outcome**: Changed "Today's Activities" to "Activities <date>".
+- **Details**: Updated the header text in `LogTracker.tsx` to "Activities {today}". Removed the leading "Today's" and parentheses for a cleaner, inline look. Corrected version mapping in `App.tsx` and updated `CHANGELOG.md`.
+
+---
+
 # Workout Tracker - Session Notes (Feb 10, 2026)
 
 ## 🏆 Completed in this Session (Latest)
